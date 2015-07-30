@@ -21,7 +21,7 @@ public class GreenDaoGenerator {
         try {
         //1.params1:db_version
 //          params2:自动生成代码的包路径
-        Schema schema = new Schema(1, "com.syl.greendao");
+        Schema schema = new Schema(1, "com.syl.dao");
 
 //        schema.setDefaultJavaPackageTest();
 //        schema.setDefaultJavaPackageDao();
@@ -29,7 +29,7 @@ public class GreenDaoGenerator {
         addUser(schema);
 
         //3.参数2：生成代码的路径：即前面设置的java-gen
-        new DaoGenerator().generateAll(schema,"../app/src/main/java-gen");
+        new DaoGenerator().generateAll(schema,"app/src/main/java-gen");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -39,7 +39,7 @@ public class GreenDaoGenerator {
      * @param schema
      */
     private static void addUser(Schema schema) {
-        //1.添加表名 表名即类名[User]
+        //1.add tableName 表名即类名[User]
         Entity user = schema.addEntity("User");
         //2.add property
         user.addIdProperty();
