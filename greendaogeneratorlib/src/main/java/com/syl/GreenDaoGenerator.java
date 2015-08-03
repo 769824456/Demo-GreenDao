@@ -14,7 +14,6 @@ import de.greenrobot.daogenerator.Schema;
  * E-MAIL: yulongsun@hengtiansoft.com
  * NOTE : 需要编译 compile 'de.greenrobot:greendao-generator:1.3.1'
  */
-
 public class GreenDaoGenerator {
 
     public static void main(String[] args ){
